@@ -13,6 +13,19 @@
         "Simon",
         "Lucas",
     ]);
+    const run = document.getElementById('run');
 
-    // your code here
+    run.addEventListener('click', () =>{
+        
+        console.log(people.size);
+        // people.delete("Alexandre");  
+
+        if (people.has ("Alexandre")) {
+            console.log('Alexandre is part of the Set.');
+            
+        } else {
+            console.log('Alexandre is not part of the Set.');
+        }
+    })
+    
 })();

@@ -18,5 +18,16 @@
         os: "linux",
         user: null,
     };
-    // your code here
+    
+    let newcomputers = computers;
+    let temp = {};
+
+    document.getElementById('run').addEventListener('click', function(){
+        for(objet of newcomputers){
+            Object.assign(temp, defaultProps);
+            Object.assign(temp, objet);
+            Object.assign(objet, temp);
+        }
+        console.log(newcomputers);
+    })
 })();

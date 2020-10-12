@@ -30,5 +30,25 @@
         "arboré",
     ]);
 
-    // your code here
+    const run = document.getElementById('run');
+
+    function rdm(min, max){
+        return Math.floor(Math.random() * (max - min + 1) + min)
+      }
+
+    function rdmbird(){
+        let bird = birds[rdm(0, birds.length - 1)];
+        let arradj = [...adjectives];
+        let adj = arradj[rdm(0, arradj.length - 1)];
+
+        if (bird.fem) {
+            return `la ${bird.name} ${adj}e`
+        }else{
+            return `le ${bird.name} ${adj}`
+        };
+    };
+
+    run.addEventListener('click', () => {
+        console.log(rdmbird())
+    })
 })();

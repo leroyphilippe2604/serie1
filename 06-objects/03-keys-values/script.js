@@ -10,5 +10,9 @@
         city: "Liège",
         status: "married",
     };
-    // your code here
+    document.getElementById('run').addEventListener('click', () =>{
+        for(let people in person){
+            console.log(`${people} : ${person[people]}`)
+        };
+    })
 })();
