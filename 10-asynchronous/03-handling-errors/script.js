@@ -2,5 +2,16 @@
 
 
 (() => {
-    // your code here
+    const run = document.getElementById('run');
+
+    run.addEventListener('click', () =>{
+
+        lib.getPersons((err, persons)=>{
+            if(err){
+                console.log('error could not fetch data');
+            } else {
+                console.log(persons);
+            }
+        })
+    })
 })();

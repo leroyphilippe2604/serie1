@@ -2,5 +2,15 @@
 
 
 (() => {
-    // your code here
+    const run = document.getElementById('run');
+
+    async function posts (request) {
+        const response = await request();
+        console.log(response);
+    }
+
+    run.addEventListener('click', () =>{
+
+        posts(lib.getPosts);
+    })
 })();

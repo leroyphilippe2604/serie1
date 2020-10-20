@@ -2,5 +2,19 @@
 
 
 (() => {
-    // your code here
+    const run = document.getElementById('run');
+
+    run.addEventListener('click', () => {
+
+        lib.getPosts()
+        .then((i)=>{
+            i.forEach(post => {
+                lib.getComments(post.id)
+                .then((j)=>{
+                    post.comments = j;
+                    console.log(post);
+                })
+            });
+        })
+    })
 })();

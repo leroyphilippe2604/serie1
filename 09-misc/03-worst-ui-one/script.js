@@ -3,6 +3,11 @@
 
 (() => {
 
-    // your code here
+    const slider = document.getElementById('slider');
+    const target = document.getElementById('target');
+
+    slider.addEventListener('input', () => {
+        target.innerText = `0${slider.value}`
+    });
 
 })();

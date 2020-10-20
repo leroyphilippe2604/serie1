@@ -2,5 +2,16 @@
 
 
 (() => {
-    // your code here
+    const run = document.getElementById('run');
+
+    run.addEventListener('click', ()=>{
+
+        lib.getPosts()
+        .then((i)=>{
+            console.log(i);
+        })
+        .catch(()=>{
+            console.log('could not fetch data')
+        })
+    })
 })();

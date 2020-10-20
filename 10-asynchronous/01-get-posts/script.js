@@ -2,5 +2,13 @@
 
 
 (() => {
-    // your code here
+    const run = document.getElementById('run');
+
+    run.addEventListener('click',() =>{
+        lib.getPosts(callback);
+        function callback (err, articles) {
+            console.log(articles)
+        }
+
+    })
 })();

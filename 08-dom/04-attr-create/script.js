@@ -3,6 +3,12 @@
 
 (() => {
 
-    // your code here
+    const source = document.getElementById('source');
+    const src = source.getAttribute('data-image');
+    const target = document.getElementById('target');
+
+    target.innerHTML = `<img src="${src}"></img>`;
+
+    source.parentNode.removeChild(source);
 
 })();

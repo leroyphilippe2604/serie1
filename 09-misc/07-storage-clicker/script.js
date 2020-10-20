@@ -3,6 +3,19 @@
 
 (() => {
 
-    // your code here
+    const increment = document.getElementById('increment');
+    const target = document.getElementById('target');
+
+    let count = localStorage.getItem('number');
+    if ( count == undefined){
+        count = 0;
+    }
+    target.innerHTML = count;
+
+    increment.addEventListener('click', () =>{
+        count++;
+        target.innerHTML = count;
+        localStorage.setItem('number', count);
+    })
 
 })();

@@ -2,5 +2,17 @@
 
 
 (() => {
-    // your code here
+    const run = document.getElementById('run');
+
+    run.addEventListener('click', () =>{
+
+        lib.getPersons()
+        .then((i)=>{
+            console.log(i);
+        })
+        .catch((i)=>{
+            console.log(i)
+            console.log('error')
+        })
+    })
 })();

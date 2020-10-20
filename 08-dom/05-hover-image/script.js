@@ -3,6 +3,15 @@
 
 (() => {
 
-    // your code here
+    const img = document.querySelector('.material figure img');
+    const original = document.querySelector('.material figure img').getAttribute('src');
+
+    img.addEventListener('mouseover', () =>{
+        img.setAttribute('src', img.getAttribute('data-hover'));
+    })
+
+    img.addEventListener('mouseout', () =>{
+        img.setAttribute('src', original);
+    })
 
 })();
