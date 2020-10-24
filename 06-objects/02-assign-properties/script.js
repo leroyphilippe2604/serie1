@@ -19,15 +19,14 @@
         user: null,
     };
     
-    let newcomputers = computers;
     let temp = {};
 
     document.getElementById('run').addEventListener('click', function(){
-        for(objet of newcomputers){
-            Object.assign(temp, defaultProps);
-            Object.assign(temp, objet);
-            Object.assign(objet, temp);
+        for(objet of computers){
+            Object.assign(temp, defaultProps); // on copie colle defaultprops dans temp
+            Object.assign(temp, objet); //on ecrase les object de computer avec defaultprops
+            Object.assign(objet, temp);// on ecrase avec les les object de computer quand c est possible
         }
-        console.log(newcomputers);
+        console.log(computers);
     })
 })();

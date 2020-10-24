@@ -11,8 +11,8 @@
         status: "married",
     };
     document.getElementById('run').addEventListener('click', () =>{
-        for(let people in person){
-            console.log(`${people} : ${person[people]}`)
+        for(let item in person){
+            console.log(`${item}: ${person[item]}`)
         };
     })
 })();

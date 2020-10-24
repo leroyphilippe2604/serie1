@@ -2,5 +2,18 @@
 
 
 (() => {
-    // your code here
+    const run = document.getElementById('run');
+
+    async function getpostwithcomment (getposts, getcomments){
+        const posts = await getposts();
+
+        posts.forEach(async (post)=> {
+            post.comments = await getcomments(post.id);
+        });
+        
+    }
+
+    run.addEventListener('click',()=>{
+        getpostwithcomment(lib.getposts, lib.getcomments);
+    })
 })();
