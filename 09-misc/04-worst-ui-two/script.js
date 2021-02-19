@@ -3,7 +3,7 @@
 
 (() => {
 
-    const target = document.getElementById('target');
+const target = document.getElementById('target');
 const buttons = document.querySelectorAll('.actions button');
 
 const btnOne = buttons[0];
